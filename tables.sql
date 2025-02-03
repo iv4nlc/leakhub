@@ -1,0 +1,10 @@
+CREATE TABLE Vehicles (
+    VehicleID INT PRIMARY KEY AUTO_INCREMENT,
+    Make VARCHAR(50) NOT NULL,
+    Model VARCHAR(50) NOT NULL,
+    Year INT CHECK (Year >= 1886),
+    Color VARCHAR(30),
+    LicensePlate VARCHAR(15) UNIQUE,
+    OwnerName VARCHAR(100),
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
