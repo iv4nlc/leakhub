@@ -8,3 +8,15 @@ CREATE TABLE Vehicles (
     OwnerName VARCHAR(100),
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE Drivers (
+    DriverID INT PRIMARY KEY AUTO_INCREMENT,
+    FullName VARCHAR(100) NOT NULL,
+    DateOfBirth DATE NOT NULL,
+    LicenseNumber VARCHAR(20) UNIQUE NOT NULL,
+    LicenseExpiration DATE NOT NULL,
+    PhoneNumber VARCHAR(15),
+    Email VARCHAR(50),
+    Address TEXT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
